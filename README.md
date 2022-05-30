@@ -1,12 +1,13 @@
 # Google Cloud GEmail Dispatcher
 
-### Sends emails using the Gmail API and Google Cloud Functions.
+## Sends emails using the Gmail API and Google Cloud Functions.
 
-### A .NET Core 3.1 equivalent of the OAuth authorization process from https://github.com/GoogleCloudPlatform/cloud-functions-gmail-nodejs
+- A .NET Core 3.1 equivalent of the OAuth authorization process from https://github.com/GoogleCloudPlatform/cloud-functions-gmail-nodejs
+- Check https://codelabs.developers.google.com/codelabs/intelligent-gmail-processing#3 for instructions to create an OAuth client to authorize access to Gmail
 
 _The Cloud Functions use HTTP trigger and unauthenticated invocations_
 
-#### Test the cloud functions
+- Test the cloud functions
 
 1. From the Google Cloud Functions dashboard, click on the OAuthInit function
 2. Go to TRIGGER tab and click on the Trigger URL
@@ -14,8 +15,8 @@ _The Cloud Functions use HTTP trigger and unauthenticated invocations_
 4. If you are redirected to a "Google didn't verify the application" page, click on Advanced and then on Access [gcloud-function-region]-[gcloud-function-projectid].cloudfunctions.net
 5. Review the scopes the cloud function wants access to, then click on Continue if everything is in order
 6. You should be redirected to a page with the successful message: "Saved the access and refresh tokens in Google Cloud Datastore!"
-7. Go to Google Cloud Functions dashboard, click on the EmailDispatcher function
-8. Go to TESTING tab and use a request like in the example, replacing the [string] with your data:
+7. Go back to Google Cloud Functions dashboard, click on the EmailDispatcher function
+8. Go to TESTING tab and use a request like in the example, replacing [string] with your data (if you don't want to input any value into CC or BCC you must use an empty string value: ""):
 
 ```
 {
@@ -31,4 +32,4 @@ _The Cloud Functions use HTTP trigger and unauthenticated invocations_
 
 9. Click TEST THE FUNCTION button
 
-_If you receive a 500 HTTP STATUS CODE due to to an Environment Variable that is null, check if there is no space after any Environment Variable in the Google Cloud Function's Dashboard_
+_If you receive a 500 HTTP STATUS CODE due to an Environment Variable that is null, edit the Google Cloud Function and check if there is no space after any Environment Variable_
