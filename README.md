@@ -7,11 +7,11 @@
 
 _The Cloud Functions use HTTP trigger and unauthenticated invocations_
 
-- To test the cloud functions
+- To test the cloud functions:
     1. From the Google Cloud Functions dashboard, click on the OAuthInit function
     2. Go to TRIGGER tab and click on the Trigger URL
     3. After the 2nd step, you should be redirected to an accounts.google.com page, choose a Google Account
-    4. If you are redirected to a "Google didn't verify the application" page, click on Advanced and then on Access [gcloud-function-region]-[gcloud-function-  projectid].cloudfunctions.net
+    4. If you are redirected to a "Google didn't verify the application" page, click on Advanced and then on Access [gcloud-function-region]-[gcloud-function-projectid].cloudfunctions.net
     5. Review the scopes the cloud function wants access to, then click on Continue if everything is in order
     6. You should be redirected to a page with the successful message: "Saved the access and refresh tokens in Google Cloud Datastore!"
     7. Go back to Google Cloud Functions dashboard, click on the EmailDispatcher function
