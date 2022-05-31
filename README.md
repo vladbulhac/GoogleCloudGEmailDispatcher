@@ -3,11 +3,11 @@
 ## Sends emails using the Gmail API and Google Cloud Functions.
 
 - A .NET Core 3.1 equivalent of the OAuth authorization process from https://github.com/GoogleCloudPlatform/cloud-functions-gmail-nodejs
-- Check https://codelabs.developers.google.com/codelabs/intelligent-gmail-processing#3 for instructions to create an OAuth client to authorize access to Gmail
+- Check https://codelabs.developers.google.com/codelabs/intelligent-gmail-processing#3 for instructions on how to create an OAuth client to authorize access to Gmail
 
 _The Cloud Functions use HTTP trigger and unauthenticated invocations_
 
-- Test the cloud functions
+- To test the cloud functions
     1. From the Google Cloud Functions dashboard, click on the OAuthInit function
     2. Go to TRIGGER tab and click on the Trigger URL
     3. After the 2nd step, you should be redirected to an accounts.google.com page, choose a Google Account
@@ -24,11 +24,11 @@ _The Cloud Functions use HTTP trigger and unauthenticated invocations_
         "ReplyTo":"[required - an email address or the same address from To]",
         "CC":"[optional - an email address]",
         "BCC":"[optional -  an email address]",
-        "Subject":"[required - subject content]",
-        "Content":"[required- content]"
+        "Subject":"[required - email's subject]",
+        "Content":"[required - email's content]"
     }
     ```
 
     9. Click TEST THE FUNCTION button
 
-_If you receive a 500 HTTP STATUS CODE due to an Environment Variable that is null, edit the Google Cloud Function and check if there is no space after any Environment Variable_
+_If you receive a 500 HTTP STATUS CODE due to an Environment Variable that is null, edit the Google Cloud Function and check if there's a space after any Environment Variable_
